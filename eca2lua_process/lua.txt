@@ -1,0 +1,149 @@
+(method) Ability:add_cd(value: number)
+(method) Ability:add_float_attr(key: string, value: number)
+(method) Ability:add_int_attr(key: string, value: integer)
+(method) Ability:add_level(value: integer)
+(method) Ability:add_player_attr_cost(key: string, value: number)
+(method) Ability:add_remaining_cd(value: number)
+(method) Ability:add_stack(value: integer)
+(method) Ability:can_cast_when_hp_insufficient()
+  -> can_cast: boolean
+function Ability.check_precondition_by_key(player: Player, ability_key: py.AbilityKey)
+  -> is_meet: boolean
+(method) Ability:complete_cd()
+EventManager?
+(method) Ability:disable()
+(method) Ability:enable()
+fun(self: Ability, event: "技能-建造完成", callback: fun(trg: Trigger, data: EventParam.技能-建造完成)):Trigger
+(method) CustomEvent:event_dispatch(event_name: string, ...any)
+  -> any
+  2. any
+  3. any
+  4. any
+(method) CustomEvent:event_dispatch_with_args(event_name: string, args: any[], ...any)
+  -> any
+  2. any
+  3. any
+  4. any
+(method) CustomEvent:event_notify(event_name: string, ...any)
+(method) CustomEvent:event_notify_with_args(event_name: string, args: any[], ...any)
+(method) CustomEvent:event_on(...any)
+  -> Trigger
+function Ability.get_by_handle(py_ability: py.Ability)
+  -> ability: Ability
+function Ability.get_by_id(id: integer)
+  -> Ability
+(method) Ability:get_cast_type()
+  -> type: py.AbilityCastType
+(method) Ability:get_cd()
+  -> time: number
+(method) Ability:get_charge_time()
+  -> number
+(method) Ability:get_float_attr(key: string)
+  -> value: number
+function Ability.get_float_attr_by_key(ability_key: py.AbilityKey, key: string)
+  -> value: number
+function Ability.get_formula_attr_by_key(ability_id: py.AbilityKey, attr_name: string, level: integer, stack_count: integer, unit_hp_max: number, unit_hp_cur: number)
+  -> value: number
+(method) Ability:get_formula_kv(key: string)
+  -> value: number
+function Ability.get_icon_by_key(ability_key: py.AbilityKey)
+  -> id: py.Texture
+(method) Ability:get_int_attr(key: string)
+  -> value: number
+function Ability.get_int_attr_by_key(ability_key: py.AbilityKey, key: string)
+  -> value: integer
+(method) Ability:get_key()
+  -> py.AbilityKey
+(method) Ability:get_level()
+  -> level: integer
+(method) Ability:get_name()
+  -> string
+(method) Ability:get_owner()
+  -> owner: Unit
+(method) Ability:get_player_attr_cost(key: string)
+  -> cost: number
+(method) Ability:get_range()
+  -> number
+(method) Ability:get_skill_pointer()
+  -> y3.Const.AbilityPointerType
+function Ability.get_skill_type_pointer(name: py.AbilityKey)
+  -> y3.Const.AbilityPointerType
+(method) Ability:get_slot()
+  -> index: y3.Const.AbilityIndex
+function Ability.get_str_attr_by_key(ability_key: py.AbilityKey, key: py.AbilityStrAttr)
+  -> str: string
+(method) Ability:get_string_attr(key: string)
+  -> value: string
+(method) Ability:get_target(cast: integer)
+  -> target: Destructible|Item|Point|Unit|nil
+(method) Ability:get_type()
+  -> type: y3.Const.AbilityType
+py.Ability
+(method) Ability:has_tag(tag: string)
+  -> boolean
+function Ability.hide_pointer(player: Player)
+integer
+(method) Ability:is_autocast_enabled()
+  -> is_enabled: boolean
+(method) Ability:is_cd_reduce()
+  -> is_influenced: boolean
+function Ability.is_cd_reduce_by_key(ability_key: py.AbilityKey)
+  -> is_influenced: boolean
+(method) Ability:is_cost_hp_can_die()
+  -> is_cost: boolean
+(method) Ability:is_exist()
+  -> is_exist: boolean
+integer?
+(method) KV:kv_has(key: string)
+  -> boolean
+string?
+(method) KV:kv_load(key: string, _type: 'boolean'|'integer'|'number'|'string'|'table'...(+1))
+  -> any
+_type:
+    | 'boolean'
+    | 'number'
+    | 'integer'
+    | 'string'
+    | 'table'
+(method) KV:kv_remove(key: any)
+(method) KV:kv_save(key: string, value: KV.SupportType)
+(method) Ability:learn()
+EventManager?
+(method) Ability:pre_cast(player: Player)
+unknown
+(method) Ability:remove()
+(method) Ability:restart_cd()
+(method) Ability:set_arrow_length(value: number)
+(method) Ability:set_arrow_width(value: number)
+(method) Ability:set_autocast(enable: boolean)
+(method) Ability:set_build_rotate(angle: number)
+(method) Ability:set_can_cast_when_hp_insufficient(can_cast: boolean)
+(method) Ability:set_cd(value: number)
+(method) Ability:set_cd_reduce(is_influenced: boolean)
+(method) Ability:set_charge_time(value: number)
+(method) Ability:set_circle_radius(value: number)
+(method) Ability:set_description(des: string)
+(method) Ability:set_float_attr(key: string, value: number)
+(method) Ability:set_icon(icon_id: integer)
+(method) Ability:set_int_attr(key: string, value: integer)
+(method) Ability:set_is_cost_hp_can_die(can_die: boolean)
+(method) Ability:set_level(level: integer)
+(method) Ability:set_max_cd(value: number)
+(method) Ability:set_name(name: string)
+function Ability.set_normal_attack_preview_state(player: Player, state: boolean)
+(method) Ability:set_player_attr_cost(key: string, value: number)
+(method) Ability:set_pointer_type(type: y3.Const.AbilityPointerType)
+(method) Ability:set_range(value: number)
+(method) Ability:set_sector_angle(value: number)
+(method) Ability:set_sector_radius(value: number)
+function Ability.set_smart_cast_with_pointer(player: Player, state: boolean)
+(method) Ability:set_stack(value: integer)
+(method) Ability:show_indicator(player: Player)
+(method) Storage:storage_get(key: any)
+  -> any
+(method) Storage:storage_set(key: any, value: any)
+table
+(method) ObjectEvent:subscribe_event(event_name: string, ...any)
+  -> any[]?
+  2. Trigger.CallBack
+  3. Unsubscribe: function
